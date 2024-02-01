@@ -113,11 +113,13 @@ copiar.addEventListener("click", () => {
     modal2.showModal();
     setTimeout(() => {
       modal2.close();
-    }, 1200);
+    }, 1300);
   }
 });
 
 const copyToClipBoard = () => {
+  let textoRight = document.querySelector(".texto-right").value;
+
   try {
     navigator.clipboard.writeText(textoRight);
   } catch (error) {

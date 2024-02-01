@@ -247,20 +247,49 @@ i {
   padding: 5px;
   margin: 25px 5px;
 }
+.modal-copy {
+  width: 30%;
+  height: 30%;
+  border: none;
+  transition: all 0.4s;
+}
 
 .modal-copy::backdrop {
   background-color: rgba(0, 0, 0, rgba(0, 0, 0, 0.55));
 }
 
+.modal2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal2 img {
+  width: 50%;
+
+  padding: 30px;
+}
+.modal2 p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 10px;
+  color: #0000ff;
+}
+
 /* <!-- AREA DE FOOTER --> */
 
-footer {
+.footer {
   /* background-color: lightseagreen; */
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   color: #495057;
+}
+.footer p {
+  padding-top: 8px;
 }
 
 /* <!-- AREA RESPONSIVE DESIGN--> */
@@ -289,8 +318,9 @@ footer {
   .parrafo2 {
     font-size: 1rem;
   }
-  footer {
-    margin-top: 150px;
+  .footer {
+    margin-top: 100px;
+    padding-top: 30px;
   }
 }
 
@@ -344,6 +374,10 @@ footer {
     height: 15%;
     font-size: 1rem;
   }
+  .mini-Texto {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
   .texto-right {
     background-size: 19%;
   }
@@ -356,8 +390,8 @@ footer {
   .modal1 p {
     text-align: center;
   }
-  footer {
-    margin-top: 120px;
+  .footer {
+    margin-top: 50px;
   }
 }
 
@@ -427,7 +461,7 @@ footer {
   }
 
   footer {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 }
 
