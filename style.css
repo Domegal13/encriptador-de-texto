@@ -1,0 +1,503 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  margin: 20px;
+  padding-top: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #e9ecf8;
+}
+
+.main {
+  width: 80%;
+  display: grid;
+  grid-template-areas:
+    "texto-left    texto-left   texto-right"
+    "texto-left    texto-left   texto-right"
+    "boton         boton        texto-right";
+  gap: 15px;
+  grid-template-columns: 33% 33% 32%;
+  grid-template-rows: 40% 40% 20%;
+
+  margin: 0 auto;
+}
+
+/* <!-- AREA IZQUIERDA --> */
+.section-left {
+  grid-area: texto-left;
+  box-sizing: border-box;
+  padding: 60px 5px 0px 0px;
+
+  resize: none;
+}
+
+.texto-left {
+  width: 98%;
+  height: 100%;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 40px 5px 0px 20px;
+}
+
+.texto-left::placeholder {
+  color: #0a3871;
+}
+
+/* <!-- AREA DE BOTONES --> */
+
+.section-botones {
+  grid-area: boton;
+  display: grid;
+  grid-template-areas:
+    "miniText   miniText   miniText"
+    "btn1       btn2        btn3";
+  grid-template-rows: 20% 60%;
+  padding-top: 10px;
+  position: relative;
+}
+
+i {
+  padding-right: 10px;
+}
+
+.mini-Texto {
+  grid-area: miniText;
+
+  color: #495057;
+  display: flex;
+  align-items: center;
+}
+
+.btn-encriptar {
+  grid-area: btn1;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-desencriptar {
+  grid-area: btn2;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-limpiar {
+  grid-area: btn3;
+  display: flex;
+  justify-content: center;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+  width: 200px;
+  height: 70%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  background: #d8dfe8;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+  transition: transform 0.2s;
+}
+
+.btn1:focus,
+.btn2:focus,
+.btn3:focus {
+  background: #0a3871;
+  color: #fff;
+}
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
+  transform: scale(0.95);
+}
+
+/* <!-- AREA DERECHA --> */
+
+.section-right {
+  grid-area: texto-right;
+  background-color: #fff;
+  border-radius: 30px;
+  position: relative;
+}
+
+.texto-right {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  background-image: url("./imagenes/Muñeco.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 5%;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 20px 10px 10px 20px;
+  border-radius: 30px;
+  resize: none;
+  outline: none;
+  border: none;
+}
+
+.parrafos {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parrafo1 {
+  width: 90%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 15px 35px;
+  text-align: center;
+}
+
+.parrafo2 {
+  width: 90%;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.section-right .btn4 {
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  width: 80%;
+  height: 8%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  background: #d8dfe8;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+  transition: all 0.2s;
+}
+.section-right .btn4:focus {
+  background: #0a3871;
+  color: #fff;
+}
+.section-right .btn4:hover {
+  transform: scale(0.95);
+}
+
+/* <!-- AREA DE MODAL --> */
+.modal {
+  justify-content: center;
+  width: 40%;
+  height: 50%;
+}
+
+.modal1 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal1 img {
+  width: 70%;
+  height: 70%;
+}
+.modal1 p {
+  align-items: center;
+}
+.modal1 .cerrar-modal {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f60040;
+  color: #fff;
+  width: 100%;
+  height: 45px;
+  line-height: 120%;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 25px 5px;
+}
+
+.modal-copy::backdrop {
+  background-color: rgba(0, 0, 0, rgba(0, 0, 0, 0.55));
+}
+
+/* <!-- AREA DE FOOTER --> */
+
+footer {
+  /* background-color: lightseagreen; */
+  margin-top: 100px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: #495057;
+}
+
+/* <!-- AREA RESPONSIVE DESIGN--> */
+
+@media screen and (max-width: 1250px) {
+  .texto-left {
+    font-size: 1.8rem;
+  }
+  .btn1,
+  .btn2,
+  .btn3 {
+    width: 150px;
+    font-size: 1rem;
+  }
+  .section-right .btn4 {
+    width: 150px;
+    font-size: 1rem;
+    left: 20%;
+  }
+  .texto-right {
+    background-position-y: 15%;
+  }
+  .parrafo1 {
+    font-size: 1.3rem;
+  }
+  .parrafo2 {
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .main {
+    display: grid;
+    grid-template-areas:
+      "texto-left    texto-left    texto-left"
+      "boton         boton         boton"
+      "texto-right   texto-right   texto-right";
+    grid-template-columns: auto;
+    grid-template-rows: 38% 20% 38%;
+    gap: 5px;
+  }
+  .texto-left {
+    font-size: 1.6rem;
+  }
+  .texto-right {
+    background-size: 25%;
+    background-position-y: 5%;
+  }
+
+  .parrafos {
+    position: absolute;
+    top: 40%;
+    left: 21%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parrafo1 {
+    width: 90%;
+    font-size: 1.02rem;
+    font-weight: 700;
+    padding: 15px 35px;
+    text-align: center;
+  }
+
+  .parrafo2 {
+    width: 90%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 5px 0 0 0;
+  }
+
+  .section-right .btn4 {
+    top: 80%;
+    left: 40%;
+    width: 150px;
+    height: 15%;
+    font-size: 1rem;
+  }
+  .texto-right {
+    background-size: 19%;
+  }
+
+  .modal1 img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .modal1 p {
+    text-align: center;
+  }
+  footer {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .texto-left {
+    font-size: 1.4rem;
+  }
+  .section-botones {
+    grid-area: boton;
+    /* background-color: orange; */
+    display: grid;
+    grid-template-areas:
+      "miniText   miniText   miniText"
+      "btn1       btn1       btn1"
+      "btn2       btn2      btn2"
+      "btn3       btn3      btn3";
+    grid-template-rows: 15% 28% 28% 28%;
+    /* grid-template-columns: repeat(3, auto); */
+    padding-top: 5px;
+    position: relative;
+    gap: 3px;
+  }
+
+  .mini-Texto {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3 {
+    width: 150px;
+    height: 90%;
+    font-size: 1rem;
+  }
+  .section-right {
+    margin-top: 8px;
+  }
+  .texto-right {
+    background-size: 25%;
+    background-position-y: 5%;
+  }
+
+  .parrafos {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parrafo1 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .parrafo2 {
+    font-size: 0.8rem;
+  }
+
+  .section-right .btn4 {
+    top: 80%;
+    left: 35%;
+    width: 150px;
+    height: 15%;
+    font-size: 1rem;
+  }
+
+  footer {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .texto-left {
+    font-size: 1.3rem;
+  }
+  .texto-right {
+    background-size: 70%;
+    background-position-y: 5%;
+  }
+  .texto-right {
+    background-size: 30%;
+    background-position-y: 5%;
+  }
+
+  .parrafos {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .parrafo1 {
+    font-size: 0.9rem;
+  }
+  .parrafo2 {
+    font-size: 0.8rem;
+  }
+  .section-right .btn4 {
+    top: 80%;
+    left: 25%;
+    width: 150px;
+    height: 15%;
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .texto-left {
+    font-size: 1.2rem;
+  }
+  .texto-right {
+    background-size: 60%;
+    background-position-y: 10%;
+  }
+  .parrafo1 {
+    font-size: 0.9rem;
+  }
+  .parrafo2 {
+    font-size: 0.6rem;
+  }
+  .section-right .btn4 {
+    top: 85%;
+    left: 25%;
+    width: 100px;
+    height: 10%;
+    font-size: 0.8rem;
+  }
+  .mini-Texto {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  footer {
+    font-size: 12px;
+    color: #0a3871;
+  }
+}

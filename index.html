@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./imagenes/encriptar-007.png"
+      type="image/x-icon"
+    />
+    <title>Encriptador-Alura</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./imagenes/Logo.png" alt="" />
+    </header>
+    <body>
+      <main class="main">
+        <!-- AREA IZQUIERDA -->
+        <section class="section-left">
+          <textarea
+            class="texto-left"
+            name="texto-left"
+            id=""
+            cols="10"
+            rows="10"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+        </section>
+
+        <!-- BOTONES -->
+        <section class="section-botones">
+          <p class="mini-Texto">
+            <i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z"
+                />
+              </svg>
+            </i>
+            Solo letras minúsculas y sin acentos
+          </p>
+          <div class="btn-encriptar">
+            <button class="btn1" onclick="encriptar()">Encriptar</button>
+          </div>
+          <div class="btn-desencriptar">
+            <button class="btn2" onclick="desencriptar()">Desencriptar</button>
+          </div>
+          <div class="btn-limpiar">
+            <button class="btn3" onclick="limpiar()">Limpiar</button>
+          </div>
+        </section>
+
+        <!-- AREA DERECHA -->
+        <section class="section-right">
+          <textarea class="texto-right" title="texto-rigth" readonly></textarea>
+          <div class="parrafos">
+            <p class="parrafo1">Ningún mensaje fue encontrado</p>
+            <p class="parrafo2">
+              Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+          </div>
+          <button class="btn4" hidden>Copiar</button>
+        </section>
+      </main>
+
+      <!-- AREA MODAL -->
+      <dialog class="modal">
+        <div class="modal1">
+          <img src="./imagenes/undraw_speech_to_text_re_8mtf.svg" alt="" />
+          <p>Debe Intruducir sólo letras minúsculas y sin acentos</p>
+          <p class="cerrar-modal">Cerrar</p>
+        </div>
+      </dialog>
+
+      <dialog class="modal-copy">
+        <div class="modal2">
+          <img src="./imagenes" alt="" />
+          <p>Texto copiado</p>
+        </div>
+      </dialog>
+
+      <!-- JAVASCRIPT -->
+      <script src="./encriptador.js"></script>
+    </body>
+
+    <footer>
+      <p>©Copyright Domegal13dev 01/2024</p>
+    </footer>
+  </body>
+</html>
